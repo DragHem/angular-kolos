@@ -1,0 +1,11 @@
+<ul *ngFor="let beer of BeerList">
+  <li> {{beer.Id}} {{beer.Name}} {{beer.Price}}</li> <button (click)="delete(beer.Id)">Usuń</button>
+</ul>
+
+<form #f="ngForm" (ngSubmit)="onSubmit(f)" novalidate>
+  <input name="Id" type="number" placeholder="Id" ngModel>
+  <input name="Name" type="text" placeholder="Name" ngModel>
+  <input name="Price" type="number" placeholder="Price" ngModel>
+  <input name="CreatedAt" type="date" placeholder="CreatedAt" ngModel>
+  <button>Submit</button>
+</form>
